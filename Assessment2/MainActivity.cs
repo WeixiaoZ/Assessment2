@@ -7,6 +7,7 @@ using Android.Widget;
 //New file
 //Oh god damn fucker.
 //I'm a smart boy.
+//i 
 namespace Assessment2
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
