@@ -5,6 +5,7 @@ using Android.Runtime;
 using Android.Widget;
 
 //New file
+//Oh god damn fucker.
 namespace Assessment2
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
