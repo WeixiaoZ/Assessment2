@@ -6,6 +6,7 @@ using Android.Widget;
 
 //New file
 //Ｉedit branch 1
+//i edit branch1
 namespace Assessment2
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
