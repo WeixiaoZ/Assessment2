@@ -43,7 +43,7 @@ namespace Assignment
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
-            View v = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.activity_items, parent, false);
+            View v = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.activity_itmes, parent, false);
             return new MyViewHolder(v);
         }
     }
