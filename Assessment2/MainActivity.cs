@@ -8,7 +8,8 @@ using Android.Views;
 using Android.Widget;
 using Assessment2;
 
-namespace Assignment
+
+namespace Assessment2
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = false)]
     public class MainActivity : AppCompatActivity
