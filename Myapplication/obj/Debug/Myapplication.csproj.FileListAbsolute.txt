@@ -1,0 +1,5 @@
+C:\Users\Junhwalee\Desktop\ApplicationPorject\ApplicationPorject\Application\Myapplication\bin\Debug\Myapplication.exe.config
+C:\Users\Junhwalee\Desktop\ApplicationPorject\ApplicationPorject\Application\Myapplication\bin\Debug\Myapplication.exe
+C:\Users\Junhwalee\Desktop\ApplicationPorject\ApplicationPorject\Application\Myapplication\bin\Debug\Myapplication.pdb
+C:\Users\Junhwalee\Desktop\ApplicationPorject\ApplicationPorject\Application\Myapplication\obj\Debug\Myapplication.exe
+C:\Users\Junhwalee\Desktop\ApplicationPorject\ApplicationPorject\Application\Myapplication\obj\Debug\Myapplication.pdb
