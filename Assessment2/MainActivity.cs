@@ -1,28 +1,64 @@
-﻿using Android.App;
+﻿using System;
+using Android.App;
 using Android.OS;
-using Android.Support.V7.App;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using Android.Runtime;
+using Android.Support.Design.Widget;
+using Android.Views;
 using Android.Widget;
+using Android.Support.V7.Widget;
+using Android.Content;
+using Myapplication.Model;
+using Myapplication.Service;
+using Application.Fragments;
 
-//New file
-//Ｉedit branch 1
-namespace Assessment2
+namespace Application
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
-    public class MainActivity : AppCompatActivity
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
+    public class MainActivity : Activity
     {
+     
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.activity_main);
-        }
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
-        {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
-            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            SetContentView(Resource.Layout.activity_main);
+
+            ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
+
+        
+            AddTab("ItemList", new ListItemFragement());
+
+
         }
+
+        private void AddTab(string tabText, Fragment view)
+        {
+
+            var tab = this.ActionBar.NewTab();
+            tab.SetText(tabText);
+
+            tab.TabSelected += delegate (object sender, ActionBar.TabEventArgs e)
+            {
+                var fragment = this.FragmentManager.FindFragmentById(Resource.Id.fragmentContainer);
+                if (fragment != null)
+                    e.FragmentTransaction.Remove(fragment);
+
+                e.FragmentTransaction.Add(Resource.Id.fragmentContainer, view);
+            };
+
+            tab.TabUnselected += delegate (object sender, ActionBar.TabEventArgs e)
+            {
+                e.FragmentTransaction.Remove(view);
+            };
+
+            this.ActionBar.AddTab(tab);
+
+        }
+
     }
 }
+
