@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">Assessment2</string>
+    <string name="app_name">Application</string>
     <string name="action_settings">Settings</string>
+
+  <string name="AboutAppActivityHeading">About MyBookStore App</string>
+  <string name="AboutAppActivityContent">MyBookStore App lets you browse and view all of the books in our store. It allows you to add the books in shopping cart and then buy it. This is a starting point to learn Android app development with Xamarin.</string>
 </resources>
