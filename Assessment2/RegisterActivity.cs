@@ -30,7 +30,12 @@ namespace Assignment
             // Create your application here
             btnRegister = FindViewById<Button>(Resource.Id.register);
             btnRegister.Click += BtnRegister_Clicked;
-        }
+            btnRegister.Click += (s, e) =>
+            {
+                Intent LoginActivity = new Intent(this, typeof(LoginActiivity));
+                StartActivity(LoginActivity);
+            };
+            }
 
         void BtnRegister_Clicked(Object sender, EventArgs e)
         {
@@ -58,9 +63,14 @@ namespace Assignment
 
             client.UploadValuesCompleted += client_UploadValuesCompleted;
 
-        }
+         
+            }
 
-        private void client_UploadValuesCompleted(object sender, UploadValuesCompletedEventArgs e)
+      
+
+
+
+    private void client_UploadValuesCompleted(object sender, UploadValuesCompletedEventArgs e)
         {
             StartActivity(new Intent(this, typeof(LauncherActivity)));
             //Toast.MakeText(this, e.ToString, Toast.Lengthlong()).show();
