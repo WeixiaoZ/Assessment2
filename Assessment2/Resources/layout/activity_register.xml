@@ -120,6 +120,5 @@
         android:layout_height="wrap_content"
         android:id="@+id/register"
         android:text="@string/register"
-        android:layout_margin="20dp"
-        android:clickable="true"/>
+        android:layout_margin="20dp"/>
 </LinearLayout>
